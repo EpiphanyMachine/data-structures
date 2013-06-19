@@ -36,19 +36,28 @@ describe("stack", function() {
     expect(stack.size()).to.equal(0);
   });
 
-  it('should add pushed items to the top of the stack', function() {
-    // Fill out the body of the test here
-  });
-
   it('should remove popped items from the top of the stack', function() {
-    // Fill out the body of the test here
+    stack.push('zero');
+    expect(stack.pop()).to.equal('zero');
   });
 
   it('should push and pop multiple items in the right order (LIFO)', function() {
-    // Fill out the body of the test here
+    stack.push('zero');
+    expect(stack.pop()).to.equal('zero');
+    stack.push('zero');
+    stack.push('one');
+    stack.push('two');
+    stack.push('three');
+    expect(stack.pop()).to.equal('three');
+    expect(stack.pop()).to.equal('two');
   });
 
   it('should not error when popping from an empty stack', function() {
+    // Fill out the body of the test here
+  });
+
+
+  it('should not leak memory', function() {
     // Fill out the body of the test here
   });
 
