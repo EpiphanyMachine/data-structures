@@ -21,6 +21,7 @@ var makeQueue = function(){
   };
   queue.head = 0; //initial value
   queue.tail = 0; //initial value
+  // create a storage size function to check for memory leaks
   queue.storageSize = function(){
     var size = 0;
     for (var key in storage){
