@@ -25,5 +25,13 @@ var makeStack = function(){
     return size;
   };
 
+  stack.storageSize = function(){
+    var size = 0;
+    for (var i = 0; i < storage.length; i++) {
+      size ++;
+    }
+    return size;
+  };
+
   return stack;
 };
