@@ -53,7 +53,10 @@ describe("stack", function() {
   });
 
   it('should not error when popping from an empty stack', function() {
-    // Fill out the body of the test here
+    stack.push('zero');
+    expect(stack.pop()).to.equal('zero');
+    expect(stack.pop()).to.equal(undefined);
+    expect(stack.pop()).to.equal(undefined);
   });
 
 
