@@ -38,5 +38,29 @@ describe("queue", function() {
     expect(queue.size()).to.equal(2);
   });
 
+  it('dequeue next item should return that item and correct size', function() {
+    queue.enqueue('hey');
+    queue.enqueue('there');
+    queue.enqueue('friend');
+    expect(queue.size()).to.equal(3);
+    expect(queue.dequeue()).to.equal('hey');
+    expect(queue.size()).to.equal(2);
+    expect(queue.dequeue()).to.equal('there');
+    expect(queue.size()).to.equal(1);
+    expect(queue.dequeue()).to.equal('friend');
+    expect(queue.size()).to.equal(0);
+  });
+
+  it('size should not be negative, if size is zero return undefined', function() {
+    queue.enqueue('hey');
+    expect(queue.size()).to.equal(1);
+    expect(queue.dequeue()).to.equal('hey');
+    expect(queue.size()).to.equal(0);
+    expect(queue.dequeue()).to.equal(undefined);
+    expect(queue.size()).to.equal(0);
+    expect(queue.dequeue()).to.equal(undefined);
+    expect(queue.size()).to.equal(0);
+  });
+
   // Hey! Add tests here that thoroughly test the functionality of your queue
 });

@@ -5,10 +5,16 @@ var makeQueue = function(){
   // Implement the methods below
   var queue = {};
   queue.enqueue = function(value){
+    storage[this.tail] = value;
     this.tail ++;
   };
   queue.dequeue = function(){
-    this.head ++;
+    if (this.size() > 0) {
+      this.head ++;
+      var temp = storage[this.head - 1];
+      delete storage[this.head - 1];
+      return temp;
+    }
   };
   queue.size = function(){
     return this.tail - this.head;
