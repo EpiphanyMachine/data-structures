@@ -21,5 +21,9 @@ describe("queue", function() {
     expect(queue.size).to.be.a('function');
   });
 
+  it('should have a size of 0 initially', function() {
+    expect(queue.size()).to.equal(0);
+  });
+
   // Hey! Add tests here that thoroughly test the functionality of your queue
 });
