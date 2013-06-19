@@ -21,6 +21,15 @@ describe("stack", function() {
     expect(stack.size).to.be.a('function');
   });
 
+  it('should return size 0 when empty', function() {
+    expect(stack.size()).to.equal(0);
+  });
+
+  it('should return size 1 after push', function() {
+    stack.push('zero');
+    expect(stack.size()).to.equal(1);
+  });
+
   it('should add pushed items to the top of the stack', function() {
     // Fill out the body of the test here
   });
