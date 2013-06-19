@@ -30,6 +30,12 @@ describe("stack", function() {
     expect(stack.size()).to.equal(1);
   });
 
+  it('should return size 0 and push and pop', function() {
+    stack.push('zero');
+    stack.pop();
+    expect(stack.size()).to.equal(0);
+  });
+
   it('should add pushed items to the top of the stack', function() {
     // Fill out the body of the test here
   });
