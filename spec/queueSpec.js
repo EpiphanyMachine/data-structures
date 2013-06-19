@@ -62,5 +62,13 @@ describe("queue", function() {
     expect(queue.size()).to.equal(0);
   });
 
+  it('check for memory leak', function() {
+    queue.enqueue('hey');
+    queue.enqueue('there');
+    queue.enqueue('friend');
+    expect(queue.size()).to.equal(3);
+    expect(queue.storageSize()).to.equal(queue.size());
+  });
+
   // Hey! Add tests here that thoroughly test the functionality of your queue
 });

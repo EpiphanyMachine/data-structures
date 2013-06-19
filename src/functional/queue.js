@@ -21,6 +21,13 @@ var makeQueue = function(){
   };
   queue.head = 0; //initial value
   queue.tail = 0; //initial value
+  queue.storageSize = function(){
+    var size = 0;
+    for (var key in storage){
+      size ++;
+    }
+    return size;
+  };
 
   return queue;
 };
