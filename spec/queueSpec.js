@@ -25,5 +25,18 @@ describe("queue", function() {
     expect(queue.size()).to.equal(0);
   });
 
+  it('enqueue a value, size should increase to 1', function() {
+    queue.enqueue('hey');
+    expect(queue.size()).to.equal(1);
+  });
+
+  it('dequeue next item, size should decrease by one', function() {
+    queue.enqueue('hey');
+    queue.enqueue('there');
+    queue.enqueue('friend');
+    queue.dequeue();
+    expect(queue.size()).to.equal(2);
+  });
+
   // Hey! Add tests here that thoroughly test the functionality of your queue
 });
