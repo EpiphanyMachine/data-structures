@@ -21,7 +21,7 @@ Stack.prototype.pop = function(){
 Stack.prototype.size = function(){
   return this.stackSize;
 };
-Stack.prototype.storageSize = function(){
+Stack.prototype.auditStorage = function(){
   var tempSize = 0;
   for (var i = 0; i < this.storage.length; i++) {
     tempSize ++;

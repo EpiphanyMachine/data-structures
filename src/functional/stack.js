@@ -26,7 +26,7 @@ var makeStack = function(){
     return size;
   };
 
-  stack.storageSize = function(){
+  stack.auditStorage = function(){
     var size = 0;
     for (var i = 0; i < storage.length; i++) {
       size ++;
