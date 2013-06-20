@@ -61,7 +61,7 @@ describe("stack", function() {
 
 
   it('should not leak memory', function() {
-    expect(stack.storageSize()).to.equal(stack.size());
+    expect(stack.auditStorage()).to.equal(stack.size());
   });
 
   // Hey! Add more tests here if you can think of ways to test your stack more thoroughly

@@ -67,7 +67,7 @@ describe("queue", function() {
     queue.enqueue('there');
     queue.enqueue('friend');
     expect(queue.size()).to.equal(3);
-    expect(queue.storageSize()).to.equal(queue.size());
+    expect(queue.auditStorage()).to.equal(queue.size());
   });
 
   // Hey! Add tests here that thoroughly test the functionality of your queue
