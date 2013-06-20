@@ -18,7 +18,8 @@ var makeStack = function(){
       delete storage[size - 1];
       size --;
       return temp;
-    } else {return undefined;}
+    }
+    return undefined;
   };
 
   stack.size = function(){
